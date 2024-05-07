@@ -1,11 +1,11 @@
-import getBrands from "@/utils";
+import { getBrands } from "@/utils";
 import Image from "next/image";
 import Link from "next/link";
 
 
 export default async function Brands() {
   const brands = await getBrands();
-  console.log('brands', brands);
+  // console.log('brands', brands);
   return (
     <>
       <section className="brands"> 

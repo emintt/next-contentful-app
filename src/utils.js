@@ -36,6 +36,23 @@ const getBrands = async () => {
   return response.items;
 };
 
+const getHomePage = async () => {
+  const response = await client.getEntries({
+    content_type: 'homePage',
+  });
+
+  return response.items;
+};
+
+const getHomePageSection = async () => {
+  const response = await client.getEntries({
+    content_type: 'pageSection',
+    'fields.slug': 'home-page-section',
+  });
+
+  return response.items;
+};
 
 
-export default getBrands;
+
+export  { getBrands, getHomePageSection };
